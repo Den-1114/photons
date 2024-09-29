@@ -43,7 +43,7 @@ header h1 {
 
 .photo-container, .video-container {
   position: relative;
-  overflow: hidden;
+
   border-radius: 12px; /* Smooth rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -54,7 +54,7 @@ header h1 {
 .photo-container img, .video-container video {
   width: 300px;
   height: 300px;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 12px; /* Rounded corners for images and videos */
   display: block;
   cursor: pointer;
