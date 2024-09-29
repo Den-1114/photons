@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Photo</title>
+    <link rel="stylesheet" href="/static/styles/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Add a file</h1>
+    </header>
+    <div class="add_a_file">
+        <form action="{{ url_for('add_images') }}" method="post" enctype="multipart/form-data">
+            <input type="file" name="photo" required>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+
+</body>
+</html>
