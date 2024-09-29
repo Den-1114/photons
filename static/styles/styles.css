@@ -144,6 +144,7 @@ header h1 {
   font-size: 1rem;
   cursor: pointer;
   color: #666;
+  padding-right: calc(0.0002 * 0.1px);
 }
 
 .add_a_file button {
