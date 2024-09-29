@@ -34,35 +34,38 @@ header h1 {
 /* Gallery Section */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust auto-fit for better responsiveness */
   gap: 20px; /* Space between images/videos */
   padding: 0 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+
 .photo-container, .video-container {
   position: relative;
-
-  border-radius: 12px; /* Smooth rounded corners */
+  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: #fff;
-  margin-bottom: 20px; /* Space between items */
-  max-width: fit-content;
+  margin-bottom: 20px;
+  width: 100%; /* Ensure container takes up the full width */
+  max-width: 300px; /* Constrain maximum width */
   margin-left: auto;
   margin-right: auto;
 }
 
+
 .photo-container img, .video-container video {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 12px; /* Rounded corners for images and videos */
+  border-radius: 12px;
   display: block;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
+
 
 .photo-container:hover, .video-container:hover {
   transform: translateY(-8px);
