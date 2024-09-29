@@ -14,11 +14,20 @@
     </header>
 
     <section class="gallery">
-      {% for photo in files %}
+      {% for photo in images %}
       <div class="photo-container">
         <img src="./static/images/{{ photo }}" onclick="openModal(this)" />
       </div>
       {% endfor %}
+
+      {% for photo in videos %}
+      <div class="video-container">
+        <video src="./static/images/{{ photo }}" controls></video>
+      </div>
+      {% endfor %}
+
+
+
     </section>
 
     <!-- Modal for full-screen image -->
@@ -28,7 +37,7 @@
       <div id="caption"></div>
     </div>
     <div style="text-align: center; margin-top: 10px;">
-      <a class="ho" href="/add_images">Upload a photo</a>
+      <a class="ho" href="/add_images">Upload a file</a>
     </div>
   </body>
 </html>

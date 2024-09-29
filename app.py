@@ -42,7 +42,10 @@ def index():
     # Check if 'logged_in' is in session to avoid KeyError
     if session.get('logged_in'):
         list_of_files = os.listdir(path)
-        return render_template('index.html', files=list_of_files)
+        list_of_videos = [a for a in list_of_files if a.endswith('.mp4')]
+        list_of_images = [a for a in list_of_files if a.endswith('.jpg') or a.endswith('.png') or a.endswith('webp') or a.endswith('jpeg') or a.endswith('gif')]
+        
+        return render_template('index.html', videos=list_of_videos, images=list_of_images)
     else:
         return redirect(url_for('error'))
 
